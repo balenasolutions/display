@@ -44,7 +44,7 @@ and multi-output kiosk needs to be designed deliberately.
 ## Prior art
 
 A proof-of-concept exists at
-`balena-solutions/display@rahul/dual-screen:examples/multiscreen`. It:
+`balenasolutions/display@rahul/dual-screen:examples/multiscreen`. It:
 
 - auto-detects connected connectors from `/sys/class/drm/card*-*/status`, treats the first as primary
   (positioned at `0,0`) and the second to its right;
