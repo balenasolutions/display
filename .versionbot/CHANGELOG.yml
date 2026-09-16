@@ -1,4 +1,20 @@
 - commits:
+    - subject: Update naming of orgs (GH/balena) for consistency
+      hash: f37641051993fdf8f5d3213e88d9c039080bca4a
+      body: |
+        Renamed from balena_solutions to balenasolutions on the balena side.
+        Renamed from balena-solutions to balenasolutions on the Github side.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Chris Crocker-White <chriscw@balena.io>
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+      author: Chris Crocker-White
+      nested: []
+  version: 0.3.1
+  title: ""
+  date: 2026-09-16T11:13:14.800Z
+- commits:
     - subject: "Add output geometry config: rotation, resolution, scale"
       hash: 75e2584fefa30ffc0f744ccb397398168b72b71a
       body: >
