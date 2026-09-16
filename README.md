@@ -12,8 +12,8 @@ Pre-built images are published to the balena registry for each supported archite
 
 | Image | Architecture | Devices |
 |---|---|---|
-| `bh.cr/balena_solutions/display-aarch64` | ARM 64-bit (`aarch64`) | Raspberry Pi 4, Raspberry Pi 5 |
-| `bh.cr/balena_solutions/display-amd64` | x86-64 (`amd64`) | Generic x86_64 (GPT) |
+| `bh.cr/balenasolutions/display-aarch64` | ARM 64-bit (`aarch64`) | Raspberry Pi 4, Raspberry Pi 5 |
+| `bh.cr/balenasolutions/display-amd64` | x86-64 (`amd64`) | Generic x86_64 (GPT) |
 
 
 ## How to Use This Block
@@ -28,7 +28,7 @@ version: '2.1'
 
 services:
   display:
-    image: bh.cr/balena_solutions/display-aarch64
+    image: bh.cr/balenasolutions/display-aarch64
     privileged: true
     restart: always
     network_mode: host
@@ -60,7 +60,7 @@ Use a `Dockerfile.template` so balena substitutes the correct architecture at bu
 
 **`./display/Dockerfile.template`**
 ```dockerfile
-FROM bh.cr/balena_solutions/display-%%BALENA_ARCH%%
+FROM bh.cr/balenasolutions/display-%%BALENA_ARCH%%
 ```
 
 **`docker-compose.yml`**
@@ -166,7 +166,7 @@ The following snippets demonstrate how to override the configuration by inheriti
 
 **`./display/Dockerfile.template`**
 ```dockerfile
-FROM bh.cr/balena_solutions/display-%%BALENA_ARCH%%
+FROM bh.cr/balenasolutions/display-%%BALENA_ARCH%%
 
 # Inject your custom Weston configuration
 COPY weston.ini /etc/weston/weston.ini

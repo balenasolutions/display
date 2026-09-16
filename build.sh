@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-ORG="${ORG:-balena_solutions}"
+ORG="${ORG:-balenasolutions}"
 BLOCK_NAME="${BLOCK_NAME:-display}"
 SRC_DIR="$(cd "$(dirname "$0")" && pwd)"
 

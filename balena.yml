@@ -12,7 +12,7 @@ post-provisioning: >-
 
   ``` version: '2.1' services:
     display:
-      image: bh.cr/balena_solutions/display-aarch64
+      image: bh.cr/balenasolutions/display-aarch64
       privileged: true
       restart: always
       network_mode: host
@@ -44,7 +44,7 @@ post-provisioning: >-
 
   **./display/Dockerfile.template**
 
-  ``` FROM bh.cr/balena_solutions/display-%%BALENA_ARCH%% ```
+  ``` FROM bh.cr/balenasolutions/display-%%BALENA_ARCH%% ```
 
   **docker-compose.yml**
 
@@ -80,12 +80,12 @@ post-provisioning: >-
   sleep 1; done exec your-app ```
 
   For more examples, see
-  https://github.com/balena-solutions/display/tree/main/examples
+  https://github.com/balenasolutions/display/tree/main/examples
 assets:
   repository:
     type: blob.asset
     data:
-      url: 'https://github.com/balena-solutions/display'
+      url: 'https://github.com/balenasolutions/display'
 data:
   supportedDeviceTypes:
     - 'raspberrypi4-64'
