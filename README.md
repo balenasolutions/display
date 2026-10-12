@@ -236,10 +236,31 @@ The display container requires:
 
 ## Debugging
 
-**Common issues:**
-- `wayland-0 socket not found` → Weston failed to start; check display logs
-- `failed to load drm driver` → GPU drivers not installed or hardware not supported
-- `[WARN] D-Bus socket not found` → Missing `io.balena.features.dbus: '1'` label on display service; Plymouth may still hold the DRM lock
+### `wayland-0 socket not found`
+
+Weston failed to start. Check the display service logs for the underlying error.
+
+### `failed to load drm driver`
+
+GPU drivers are not installed or the hardware is not supported.
+
+### `[WARN] D-Bus socket not found`
+
+The `io.balena.features.dbus: '1'` label is missing on the display service. Plymouth may still hold the DRM lock.
+
+### `no drm device found`
+
+Weston could not find a display-capable (KMS) GPU device on the host, so the GPU driver is not loaded. On Raspberry Pi, make sure the `vc4-kms-v3d` overlay is enabled. A custom `BALENA_HOST_CONFIG_dtoverlay` replaces the default overlay list, so it must still include `vc4-kms-v3d`.
+
+To check from the **Host OS** terminal:
+
+```bash
+ls -l /dev/dri /sys/class/drm
+grep -E '^(dtoverlay|gpu_mem)' /mnt/boot/config.txt
+dmesg | grep -iE 'vc4|v3d|drm'
+```
+
+If `/dev/dri` has no `card*` entries, the GPU driver is not loaded.
 
 
 [block-ref-url]:https://docs.balena.io/learn/develop/blocks/#getting-started-with-blocks
