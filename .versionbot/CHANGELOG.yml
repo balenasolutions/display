@@ -1,4 +1,18 @@
 - commits:
+    - subject: 'docs: Split debugging section and add "no drm device found"'
+      hash: c483f4ada9f013777e12d690f8eed2380b24b861
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: rahul-thakoor <13220877+rahul-thakoor@users.noreply.github.com>
+        signed-off-by: rahul-thakoor <13220877+rahul-thakoor@users.noreply.github.com>
+      author: Rahul Thakoor
+      nested: []
+  version: 0.3.2
+  title: ""
+  date: 2026-10-12T14:52:42.869Z
+- commits:
     - subject: Update naming of orgs (GH/balena) for consistency
       hash: f37641051993fdf8f5d3213e88d9c039080bca4a
       body: |
